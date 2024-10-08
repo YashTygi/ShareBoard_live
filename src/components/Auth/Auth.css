@@ -1,0 +1,100 @@
+/* Auth.module.css */
+.dialog-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(240, 240, 240, 0.5); /* Semi-transparent backdrop */
+    backdrop-filter: blur(1px); /* Blur effect */
+    z-index: 10;
+    padding: 20px; /* Padding for small screen spacing */
+    margin: 0 auto;
+}
+
+dialog {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    
+}
+
+.auth-title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.auth-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding does not exceed container */
+}
+
+.auth-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Add some space between the buttons */
+}
+
+.auth-primary,
+.auth-secondary {
+    flex: 1; /* Buttons will be equally sized */
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.auth-primary {
+    background-color: #4caf50;
+    color: white;
+}
+
+.auth-secondary {
+    background-color: #f44336;
+    color: white;
+}
+
+.auth-primary:hover {
+    background-color: #45a049;
+}
+
+.auth-secondary:hover {
+    background-color: #e53935;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .auth-title {
+        font-size: 20px;
+    }
+
+    .auth-input {
+        font-size: 14px;
+    }
+
+    .auth-primary,
+    .auth-secondary {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) {
+    .dialog {
+        max-width: 450px; /* Slightly larger on bigger screens */
+    }
+}

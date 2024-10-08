@@ -1,0 +1,316 @@
+@keyframes scaleUp {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+@keyframes opacityUp {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+}
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateX(10px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+
+  .homepage{
+    max-height: 100dvh;
+    overflow: hidden;
+  }
+.hero_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    align-items: center;
+    min-height: 100dvh;
+    font-family: "Manrope", sans-serif;
+    position: relative;
+
+    --dot-bg: #faf8f8;
+    --dot-color: #222222;
+    --dot-size: 2px;
+    --dot-space: 1.5rem;
+    background:
+      linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+      linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+      var(--dot-color);
+
+}
+
+.hero_heading{
+    font-size: 7rem;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+.heading_code{
+    color: #D8B337;
+}
+
+.hero_heading::selection{
+    background-color: #222222;
+    color: #fff;
+}
+
+.hero_heading[data-attribute="bold"]{
+    font-weight: 800;
+    animation: fadeUp 0.5s ease-in-out;
+}
+
+.hero_heading[data-attribute="italic"]{
+    font-style: italic;
+    /* font-family: 'Times New Roman', Times, serif; */
+    animation: fadeInUp 0.5s ease-in-out;
+}
+
+.hero_heading[data-attribute="underline"]{
+    text-decoration: underline;
+    animation: fadeUp 0.5s ease-in-out;
+}
+
+.hero_heading[data-attribute="strikethrough"]{
+    text-decoration: line-through;
+    animation: fadeUp 0.5s ease-in-out;
+}
+
+.hero_heading[data-attribute="code"]{
+    font-size: 7rem;
+    font-weight: 600;
+    border-radius: 2rem;
+    padding: 0rem 2rem;
+    animation: fadeUp 0.5s ease-in-out;
+}
+
+.hero_heading[data-attribute="quote"]{
+    font-size: 7rem;
+    font-weight: 500;
+
+    background:#cacaca88;
+    padding: 0rem 2rem;
+    position: relative;
+    border-radius: 1rem;
+
+    animation: fadeUp 0.5s ease-in-out;
+}
+
+.hero_heading[data-attribute="quote"]::before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: -7%;
+    width: 10px;
+    height: 9.65rem;
+    border-radius: 1rem;
+    background: #a4a4a4;
+    z-index: 10;
+
+    animation: scaleUp 0.5s ease-in-out;
+}
+
+.hero_section .hero_symbols{
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #fff;
+    border: none;
+    cursor: pointer;
+    height: 3rem;
+    padding: 4px 6px;
+    margin: 0.35rem 0;
+    width: 3rem;
+    border-radius: 0.5rem;
+    font-size: 1.55rem;
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; 
+
+}
+
+.hero_input_wrapper {
+    position: relative;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+  }
+
+.hero_input{
+    padding: 1.5rem 1.5rem 1.5rem 10rem ;
+    width: 90rem;
+    outline: none;
+    border: 1px solid black;
+    color: #5d5d5d;
+    border-radius: 1rem;
+    
+
+    font-family: sans-serif;
+    font-size: 1.2rem;
+}
+
+.hero_input_wrapper  .placeholder-label {
+    position: absolute;
+    left: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    
+    color: #5d5d5d;
+    pointer-events: none;
+    transition: 0.2s ease all;
+  }
+
+.hero_button{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+    height: 100%;
+    width: 10%;
+
+    padding:1rem 2rem;
+    outline: none;
+    border: none;
+    border-radius: 0rem 1rem 1rem 0;
+
+    
+    font-size: 1.2rem;
+    font-family: sans-serif;
+
+    background-color: rgb(23, 24, 24);
+    color: white;
+
+    cursor: pointer;
+    text-decoration: none;
+
+    transition: all 0.5s ease-in-out;
+}
+
+.hero_button:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+    transition: none;
+    width: 10%;
+    background-color: #626262;
+}
+
+.hero_button:disabled:hover{
+    width: 10%;
+    border-radius: 0rem 1rem 1rem 0;
+}
+
+.hero_button:hover{
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.hero_symbol_image_cat{
+    position: absolute;
+    bottom: 40%;
+    right: -5%;
+    width: 35%;
+    height: 35%;
+    display: none;
+}
+
+.hero_symbol_image_cat[data-attribute="image"]{
+    display: block;
+    background: url("../../assets/dog.gif");
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+
+.hero_symbol_image_lee{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 70%;
+    display: none;
+}
+
+.hero_symbol_image_lee[data-attribute="image"]{
+    display: block;
+    background: url("../../assets/lee.gif");
+    background-size:contain;
+    background-repeat: no-repeat;
+    animation: fadeUp 500ms ease-in-out;
+    background-position: 50% 90%;
+
+    animation: fadeInUp 500ms ease-in-out;
+}
+
+.hero_image{
+    width: 100%;
+    height: 100%;
+}
+
+.hero_arrow{
+    margin: 0 auto;
+}
+
+.error-message{
+    color: rgb(71, 70, 70);
+    position: absolute;
+    bottom: -53%;
+    background: #faf8f8;
+    padding: 0.1rem 0.25rem;
+    border-radius: 0.5rem;
+}
+
+.hero_developer{
+    position: absolute;
+    bottom: 1%;
+    right: 50%;
+    transform: translateX(50%);
+    z-index: 200;
+}
+
+
+.bold{
+    font-weight: 700;
+    top: 10%;
+    left: 20%;
+}
+
+.italic{
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    top: 20%;
+    left: 10%;
+}
+
+.underline{
+    text-decoration: underline;
+    top: 40%;
+    right: 10%;
+}
+
+.strikethrough{
+    text-decoration: line-through;
+    top: 10%;
+    left: 75%;
+}
+
+.image{
+    top: 35%;
+    left: 10%;
+    
+}
+
+.code{
+    top: 45%;
+    left: 20%;
+}
+
+.quote{
+    top: 20%;
+    right: 10%;
+}

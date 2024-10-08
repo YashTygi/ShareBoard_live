@@ -1,0 +1,97 @@
+ html {
+     max-height: 100vh;
+     overflow: hidden;
+     --dot-bg: #faf8f8;
+     --dot-color: #222222;
+     --dot-size: 2px;
+     --dot-space: 15px;
+     background:
+         linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+         linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+         var(--dot-color);
+
+     scroll-behavior: smooth;
+ }
+
+ .editor {
+    width: 100dvw;
+    height: 100dvh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+
+ .editor_content_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 0.75rem 0 1rem;
+ }
+
+ .editor_btn{
+    position: fixed;
+    bottom: 3%;
+    right: 1.5%;
+ }
+ 
+ .ql-container.ql-snow {
+     height: 97dvh;
+     border-radius: 3px;
+     width: 96dvw;
+     margin: 0.75rem 0.5rem;
+     font-size: 1rem;
+     font-family: "Manrope", sans-serif;
+
+     border-radius: 1.75rem;
+
+     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+     /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+
+ }
+
+ .ql-editor {
+     border-radius: 1.75rem;
+     background-color: white;
+     font-family: "Manrope", sans-serif;
+     padding: 1.25rem 1.25rem;
+
+
+ }
+
+ .ql-editor::-webkit-scrollbar {
+     width: 0rem;
+     scroll-behavior: smooth;
+
+ }
+
+ .ql-editor::-webkit-scrollbar-thumb {
+     background-color: rgba(0, 0, 0, 0.2);
+     border-radius: 1.4rem;
+ }
+
+ .ql-editor.ql-blank {
+     padding: 1.25rem 1.25rem;
+ }
+
+ .ql-editor.ql-blank::before {
+     color: rgba(0, 0, 0, 0.6);
+     content: attr(data-placeholder);
+     font-style: italic;
+     pointer-events: none;
+     position: absolute;
+     left: 1.25rem;
+     top: 1.25rem;
+     font-family: "Manrope", sans-serif;
+ }
+
+ .ql-toolbar.ql-snow {
+     z-index: 500;
+     padding: 0;
+ }
+
+ .ql-toolbar.ql-snow .ql-formats {
+     margin-right: 0;
+ }
