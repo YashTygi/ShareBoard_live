@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from 'react';
+import { FC, useState } from 'react';
 import "./ReadEditModeButton.css";
 import SetAuth from '../Auth/SetAuth';
 import VerifyAuth from '../Auth/VerifyAuth';

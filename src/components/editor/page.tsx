@@ -1,11 +1,8 @@
 "use client";
-import dynamic from 'next/dynamic'
 import React, { useEffect, useState, useRef } from 'react';
 import 'react-quill/dist/quill.snow.css';
 import QuillToolbar, { modules, formats } from './plugins/EditorToolbarPlugin';
-//@ts-ignore
 import ReactQuill from 'react-quill';
-import { useGlobalContext } from '@/context/store';
 import './editor.css';
 import ReadEditModeButton from '../ReadEditModeButton/ReadEditModeButton';
 import { ToastContainer, toast } from 'react-toastify';

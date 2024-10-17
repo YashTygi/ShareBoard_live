@@ -1,13 +1,11 @@
 "use client";
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import './homepage.css';
 import Arrow from '@/assets/icons/Arrow';
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-// import CustomCursor from 'custom-cursor-react';
-// import 'custom-cursor-react/dist/index.css';
-import Image from '@/assets/icons/Image';
+import ImageSVG from '@/assets/icons/Image';
 import Quote from '@/assets/icons/Quote';
 import DeveloperButton from './developerButton/DeveloperButton';
 
@@ -66,7 +64,7 @@ const HomePage = (): JSX.Element => {
 
   const onCurrentHover = (event: React.MouseEvent<HTMLElement, MouseEvent>, current: string) => {
     event.preventDefault();
-    let randnum = randomNumber();
+    const randnum = randomNumber();
     setRandom(randnum);
     setCurrentHover(current);
   };
@@ -160,7 +158,7 @@ const HomePage = (): JSX.Element => {
       <span 
        onMouseLeave={(event: React.MouseEvent<HTMLSpanElement, MouseEvent>) => onCurrentHoverLeave(event)} 
        onMouseOver={(event: React.MouseEvent<HTMLSpanElement, MouseEvent>) => onCurrentHover(event, 'image')} className="hero_symbols image">
-        <Image width={24} height={24} />
+        <ImageSVG width={24} height={24} />
       </span>
       <span 
        onMouseLeave={(event: React.MouseEvent<HTMLSpanElement, MouseEvent>) => onCurrentHoverLeave(event)} 

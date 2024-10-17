@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { useState } from 'react'
 import styles from './DeveloperButton.module.css'
 import { useAnimate } from 'framer-motion'
 import Image from 'next/image'
@@ -9,9 +9,8 @@ import Github from '@/assets/icons/Github'
 import X from '@/assets/icons/X'
 import LinkedIn from '@/assets/icons/LinkedIn'
 
-interface DeveloperButtonProps {}
 
-const DeveloperButton: FC<DeveloperButtonProps> = ({}) => {
+const DeveloperButton = () => {
   const [scope, animate] = useAnimate()
   const [isAnimated, setIsAnimated] = useState<boolean>(false)
   const [currentHover, setCurrentHover] = useState<string>('')
