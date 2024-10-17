@@ -1,0 +1,57 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    padding: 2rem;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+
+    --dot-bg: #faf8f8;
+    --dot-color: #222222;
+    --dot-size: 2px;
+    --dot-space: 30px;
+    background:
+      linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+      linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+      var(--dot-color);
+}
+.title {
+    font-size: 5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+.text {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+.suggestionTitle {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+.suggestionList {
+    list-style: none;
+    padding: 0;
+}
+.suggestionItem {
+    margin-bottom: 1rem;
+}
+.suggestionLink {
+    font-size: 1.25rem;
+    color: #0070f3;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.suggestionLink:hover {
+    color: #0056b3;
+}
+
+.italic{
+    font-style: italic;
+}
